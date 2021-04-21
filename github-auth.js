@@ -1,8 +1,9 @@
 import { setContext } from '@apollo/client/link/context'
 
+
 const authLink = setContext((_, { headers }) => {
   //Auth token from local storage
-  const token = `${process.env.GITHUB_AUTH_PAT}`;
+  const token = `${process.env.NEXT_PUBLIC_GITHUB_AUTH_PAT}`;
   //Return to context for http link
   return {
     headers: {
