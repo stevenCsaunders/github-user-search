@@ -8,11 +8,11 @@ import {
 
 export const User = ({ user }) => {
 	return (
-		<div className='max-w-2xl w-full rounded-lg shadow-lg p-4 mb-4 flex md:flex-row'>
+		<div className='max-w-3xl w-full rounded-lg shadow-lg p-4 mb-4 flex md:flex-row'>
 			<a href={user.url} rel='noopener noreferrer' target='_blank'>
 				<img
 					src={user.avatarUrl}
-					alt='user avatar'
+					alt={user.name}
 					className='rounded-full border border-gray-500 w-16 h-16 mr-5'
 				/>
 			</a>
@@ -23,12 +23,10 @@ export const User = ({ user }) => {
 						rel='noopener noreferrer'
 						target='_blank'
 					>
-						<h4 className='font-semibold text-md tracking-wide'>
-							{user.name}{' '}
-							<span className='text-gray-400 text-sm mx-2'>
-								({user.login})
+						<h3 className='font-semibold text-md tracking-wide'>
+							{user.name}<span className='text-gray-400 text-sm mx-2 font-light'>({user.login})
 							</span>
-						</h4>
+						</h3>
 					</a>
 				</div>
 				<p className='text-gray-500 text-sm my-1'>
